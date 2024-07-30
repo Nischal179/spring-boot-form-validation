@@ -1,5 +1,6 @@
 package com.example.validation.data_validation;
 
+import com.example.validation.data_validation.validation.CourseCode;
 import jakarta.validation.constraints.*;
 
 public class Customer {
@@ -31,6 +32,17 @@ public class Customer {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @CourseCode
+    private String courseCode;
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 
     public Integer getFreePasses() {
